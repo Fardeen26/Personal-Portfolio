@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Baloo+2&family=Libre+Baskerville&family=Noto+Sans&family=Oswald:wght@500&family=Playfair+Display:wght@500&family=Poppins:wght@400;600&family=Roboto+Mono:wght@200&family=Roboto:wght@500&family=Rubik&family=Ubuntu&display=swap');
+
+@media (max-width: 1287px) {
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .web-logo {
+        font-size: 1.1rem;
+    }
+
+    .leftSection {
+        font-size: 2.3rem;
+    }
+
+    .rightSection img {
+        width: 400px;
+    }
+
+    .thirdSection {
+        height: 105vh;
+        margin-top: -20px;
+    }
+
+    .third-right img {
+        width: 290px;
+    }
+
+    .secondSkills-container {
+        height: 70vh;
+    }
+
+    .secondBox-left {
+        width: 42%;
+    }
+
+    .secondBox-right-options {
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    .project-section {
+        padding: 0px 100px;
+    }
+
+}
+
+@media (max-width: 1050px) {
+
+    .leftSection {
+        font-size: 2.2rem;
+        width: 40%;
+    }
+
+    .rightSection img {
+        width: 370px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .thirdSection {
+        height: 105vh;
+        margin-top: -20px;
+        padding: 0px 100px;
+    }
+
+    .third-right img {
+        width: 270px;
+    }
+
+    .third-left {
+        width: 45vw;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .secondSkills-container {
+        height: 70vh;
+    }
+
+    #color-white {
+        font-size: 13px;
+        white-space: nowrap;
+        word-break: normal;
+    }
+
+    .secondBox-left {
+        width: 48%;
+    }
+
+    .secondBox-right-options {
+        width: 90%;
+        margin-left: 23px;
+    }
+
+    .skill-image img {
+        width: 31px;
+        height: 31px;
+    }
+
+    .project-section {
+        padding: 0px 100px;
+    }
+
+    .fifthSection {
+        padding: 0px 20px 50px 20px;
+    }
+
+    .fifth-flex {
+        margin-top: 60px;
+        padding: 0 60px;
+    }
+
+    .fifth-input {
+        width: 30vw;
+        height: 6vh;
+    }
+
+    .large-input {
+        width: 30vw;
+        height: 15vh;
+    }
+
+    .fifth-btn {
+        font-size: 14px;
+        width: 11vw;
+        height: 40px;
+    }
+
+    .grid-box {
+        width: 10vw;
+        height: 25vh;
+        margin: 10px 50px 0 0;
+        white-space: nowrap;
+        word-break: normal;
+    }
+
+    .grid-box i {
+        font-size: 20px;
+    }
+
+    .grid-box h3 {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .grid-box p {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 890px) {
+
+    
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .web-logo {
+        font-size: 1rem;
+    }
+
+    .firstSection {
+        display: flex;
+        /* justify-content: space-around; */
+        align-items: center;
+        margin: 45px 0;
+        height: 60vh;
+    }
+
+    .leftSection {
+        font-size: 1.8rem;
+        width: 30%;
+        /* margin-right: 100px;
+         */
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .rightSection img {
+        width: 340px;
+    }
+
+    .thirdSection {
+        padding: 0px 50px;
+    }
+
+    .third-right img {
+        width: 260px;
+    }
+
+    .third-left {
+        width: 45vw;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+
+    .secondSection {
+        margin: 0px auto;
+    }
+
+    .secondSkills-container {
+        height: 70vh;
+    }
+
+    #color-white {
+        font-size: 13px;
+    }
+
+    .secondBox-left {
+        width: 50%;
+    }
+
+    .second-left-box-p {
+        font-size: 10px;
+    }
+
+    .secondBox-right-options {
+        width: 90%;
+        margin-left: 52px;
+    }
+
+    .skills-container {
+        width: 40vw;
+    }
+
+    .skill-image {
+        width: 12vw;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .skill-image img {
+        width: 31px;
+        height: 31px;
+    }
+
+    
+    .project-section {
+        padding: 0px 20px;
+    }
+
+    .project-1 {
+        width: 30vw;
+        height: 30vh;
+    }
+    
+    .project-2 {
+        width: 30vw;
+        height: 30vh;
+    }
+
+    .fifth-left {
+        display: none;
+    }
+    .fifthSection {
+        padding: 0px 20px 20px 20px;
+    }
+
+    .fifth-input {
+        width: 40vw;
+        height: 6vh;
+    }
+    
+    .large-input {
+        width: 40vw;
+        height: 15vh;
+    }
+    
+    .fifth-btn {
+        font-size: 14px;
+        width: 13vw;
+        height: 40px;
+        padding: 5px;
+    } 
+/* 
+    .grid-box {
+        width: 10vw;
+        height: 25vh;
+        margin: 10px 30px 0 0;
+    }
+
+    .grid-box i {
+        font-size: 20px;
+    }
+
+    .grid-box h3 {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .grid-box p {
+        font-size: 11px;
+    } */
+}
