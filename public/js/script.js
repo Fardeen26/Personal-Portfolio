@@ -18,71 +18,107 @@ for (let gotoLink of gotoLinks) {
     })
 }
 
-let skillLinks = document.querySelectorAll(".hreflink");
-let skillContainer = document.querySelectorAll(".front-end-detail");
-skillLinks[0].classList.add("active");
+// let skillLinks = document.querySelectorAll(".hreflink");
+// let skillContainer = document.querySelectorAll(".front-end-detail");
+// skillLinks[0].classList.add("active");
 
-for (let links of skillLinks) {
-    links.addEventListener("click", (e) => {
+// for (let links of skillLinks) {
+//     links.addEventListener("click", (e) => {
 
-        if (e.srcElement.innerHTML == "Front-End") {
-            skillContainer[0].classList.add("display-block")
-            skillContainer[1].classList.remove("display-block")
-            skillContainer[2].classList.remove("display-block")
-            skillLinks[0].classList.add("active");
-            skillLinks[1].classList.remove("active");
-            skillLinks[2].classList.remove("active");
-        }
+//         if (e.srcElement.innerHTML == "Front-End") {
+//             skillContainer[0].classList.add("display-block")
+//             skillContainer[1].classList.remove("display-block")
+//             skillContainer[2].classList.remove("display-block")
+//             skillLinks[0].classList.add("active");
+//             skillLinks[1].classList.remove("active");
+//             skillLinks[2].classList.remove("active");
+//         }
 
-        else if (e.srcElement.innerHTML == "Back-End") {
-            skillContainer[1].classList.add("display-block")
-            skillContainer[0].classList.remove("display-block")
-            skillContainer[0].classList.add("display-none")
-            skillContainer[2].classList.remove("display-block")
-            skillLinks[1].classList.add("active");
-            skillLinks[0].classList.remove("active");
-            skillLinks[2].classList.remove("active");
-        }
+//         else if (e.srcElement.innerHTML == "Back-End") {
+//             skillContainer[1].classList.add("display-block")
+//             skillContainer[0].classList.remove("display-block")
+//             skillContainer[0].classList.add("display-none")
+//             skillContainer[2].classList.remove("display-block")
+//             skillLinks[1].classList.add("active");
+//             skillLinks[0].classList.remove("active");
+//             skillLinks[2].classList.remove("active");
+//         }
 
-        else if (e.srcElement.innerHTML == "Others") {
-            skillContainer[0].classList.remove("display-block")
-            skillContainer[0].classList.add("display-none")
-            skillContainer[1].classList.remove("display-block")
-            skillContainer[2].classList.add("display-block")
-            skillLinks[2].classList.add("active");
-            skillLinks[0].classList.remove("active");
-            skillLinks[1].classList.remove("active");
-        }
-    })
-}
+//         else if (e.srcElement.innerHTML == "Others") {
+//             skillContainer[0].classList.remove("display-block")
+//             skillContainer[0].classList.add("display-none")
+//             skillContainer[1].classList.remove("display-block")
+//             skillContainer[2].classList.add("display-block")
+//             skillLinks[2].classList.add("active");
+//             skillLinks[0].classList.remove("active");
+//             skillLinks[1].classList.remove("active");
+//         }
+//     })
+// }
 
-let darkModeBtn = document.querySelector(".light-dark-btn");
-let darkModeBtnParent = document.querySelector(".light-dark-btn-parent");
+let darkModeBtn = document.querySelector(".fa-sun");
 let body = document.querySelector("body");
 let nav = document.querySelector("nav");
-
-darkModeBtn.addEventListener("click", (e) => {
-    if (e.srcElement.classList.contains("fa-moon")) {
-        e.srcElement.classList.replace("fa-moon", "fa-sun");
-        body.classList.add("bg-white", "color-black");
-        body.style.transition = ".5s";
-        nav.classList.add("bg-white", "color-black");
-
-        for (let navHref of gotoLinks) {
-            navHref.classList.add("color-black");
+let frontBtns = document.querySelectorAll(".front-btn");
+let aboutSection = document.querySelector(".third-flex");
+let skillBoxes = document.querySelectorAll(".skill-boxes");
+let skillBtns = document.querySelectorAll("#color-white");
+let skillImages = document.querySelectorAll(".skill-image");
+let frontColors = document.querySelectorAll(".purple");
+let footerHeading = document.querySelector(".left");
+let cards = document.querySelector("#card");
+let cardTexts = document.querySelectorAll(".card-text");
+let cardTitles = document.querySelectorAll(".card-title");
+let gitLinks = document.querySelectorAll(".git-links");
+darkModeBtn.addEventListener("click", async (e) => {
+    if (e.srcElement.classList.contains("fa-sun")) {
+        e.srcElement.classList.replace("fa-sun", "fa-moon");
+        body.style.transition = ".5s"
+        body.classList.add("bg-black","color-white");
+        nav.classList.add("bg-black","color-white");
+        for(let frontColor of frontColors) {
+            frontColor.classList.replace("purple","purple-black");
         }
-        e.srcElement.classList.add("color-black");
+        for(let frontBtn of frontBtns){
+            frontBtn.classList.add("purple-black-bg");
+        }
+        for(let gotoLink of gotoLinks){
+            gotoLink.classList.add("color-white");
+        }
+        for(let cardText of cardTexts) {
+            cardText.classList.add("color-white");
+        }
+        for(let cardTitle of cardTitles) {
+            cardTitle.classList.add("color-white");
+        }
+        darkModeBtn.classList.add("color-white");
+        for(let gitLink of gitLinks) {
+            gitLink.classList.add("color-white");
+        }
     }
     else {
-        e.srcElement.classList.replace("fa-sun", "fa-moon");
-        body.classList.remove("bg-white", "color-black");
-        nav.classList.remove("bg-white", "color-black");
-        for (let navHref of gotoLinks) {
-            navHref.classList.remove("color-black");
+        e.srcElement.classList.replace("fa-moon", "fa-sun");
+        body.classList.remove("bg-black","color-white");
+        nav.classList.remove("bg-black","color-white");
+        for(let frontColor of frontColors) {
+            frontColor.classList.replace("purple-black","purple");
         }
-        e.srcElement.classList.remove("color-black");
-
+        for(let frontBtn of frontBtns){
+            frontBtn.classList.remove("purple-black-bg");
+        }
+        for(let gotoLink of gotoLinks){
+            gotoLink.classList.remove("color-white");
+        }
+        for(let cardText of cardTexts) {
+            cardText.classList.remove("color-white");
+        }
+        for(let cardTitle of cardTitles) {
+            cardTitle.classList.remove("color-white");
+        }
+        darkModeBtn.classList.remove("color-white");
+        for(let gitLink of gitLinks) {
+            gitLink.classList.remove("color-white");
+        }
     }
+
 });
-
-

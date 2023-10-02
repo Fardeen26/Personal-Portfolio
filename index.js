@@ -33,18 +33,22 @@ app.get("/home", (req, res) => {
 
 app.post("/home/contact", (req, res) => {
     let { username, email, message} = req.body;
-    let q = `iNSERT INTO webusers (username, email, message) VALUES ('${username}', '${email}', '${message}')`;
+    let q = `INSERT INTO webusers (username, email, message) VALUES ('${username}', '${email}', '${message}')`;
     
     try {
         connection.query(q, (err, result) => {
             if(err) throw err;
-            res.redirect("/home");
+            // res.redirect("/home");
+            console.log(res);
+            res.render("contact.ejs");
         })
     }catch(err) {
         console.log(err);
         res.send(err);
     }
-})
+
+    
+});
 app.listen(port, () => {
     console.log(`listning to port : 8080`);
 })

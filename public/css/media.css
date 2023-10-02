@@ -10,102 +10,9 @@
         font-size: 1.1rem;
     }
 
-    .leftSection {
-        font-size: 2.3rem;
-    }
-
-    .rightSection img {
-        width: 400px;
-    }
-
-    .thirdSection {
-        height: 105vh;
-        margin-top: -20px;
-    }
-
-    .third-right img {
-        width: 290px;
-    }
-
-    .secondSkills-container {
-        height: 70vh;
-    }
-
-    .secondBox-left {
-        width: 42%;
-    }
-
-    .secondBox-right-options {
-        width: 90%;
-        margin-left: 10px;
-    }
-
-    .project-section {
-        padding: 0px 100px;
-    }
-
 }
 
 @media (max-width: 1050px) {
-
-    .leftSection {
-        font-size: 2.2rem;
-        width: 40%;
-    }
-
-    .rightSection img {
-        width: 370px;
-    }
-
-    .btn {
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .thirdSection {
-        height: 105vh;
-        margin-top: -20px;
-        padding: 0px 100px;
-    }
-
-    .third-right img {
-        width: 270px;
-    }
-
-    .third-left {
-        width: 45vw;
-        padding-bottom: 10px;
-        font-size: 14px;
-    }
-
-    .secondSkills-container {
-        height: 70vh;
-    }
-
-    #color-white {
-        font-size: 13px;
-        white-space: nowrap;
-        word-break: normal;
-    }
-
-    .secondBox-left {
-        width: 48%;
-    }
-
-    .secondBox-right-options {
-        width: 90%;
-        margin-left: 23px;
-    }
-
-    .skill-image img {
-        width: 31px;
-        height: 31px;
-    }
-
-    .project-section {
-        padding: 0px 100px;
-    }
-
     .fifthSection {
         padding: 0px 20px 50px 20px;
     }
@@ -126,143 +33,32 @@
     }
 
     .fifth-btn {
-        font-size: 14px;
-        width: 11vw;
+        font-size: 13px;
+        width: 13vw;
         height: 40px;
     }
-
-    .grid-box {
-        width: 10vw;
-        height: 25vh;
-        margin: 10px 50px 0 0;
-        white-space: nowrap;
-        word-break: normal;
-    }
-
-    .grid-box i {
-        font-size: 20px;
-    }
-
-    .grid-box h3 {
-        margin: 8px 0;
-        font-size: 16px;
-    }
-
-    .grid-box p {
-        font-size: 11px;
-    }
-
 }
 
 @media (max-width: 890px) {
 
-    
+    nav {
+        padding: 0 40px;
+    }
+
     nav ul li a {
         font-size: 13px;
     }
 
     .web-logo {
         font-size: 1rem;
-    }
-
-    .firstSection {
-        display: flex;
-        /* justify-content: space-around; */
-        align-items: center;
-        margin: 45px 0;
-        height: 60vh;
-    }
-
-    .leftSection {
-        font-size: 1.8rem;
-        width: 30%;
-        /* margin-right: 100px;
-         */
-    }
-
-    .btn {
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .rightSection img {
-        width: 340px;
-    }
-
-    .thirdSection {
-        padding: 0px 50px;
-    }
-
-    .third-right img {
-        width: 260px;
-    }
-
-    .third-left {
-        width: 45vw;
-        padding-bottom: 10px;
-        font-size: 14px;
-    }
-
-
-    .secondSection {
-        margin: 0px auto;
-    }
-
-    .secondSkills-container {
-        height: 70vh;
-    }
-
-    #color-white {
-        font-size: 13px;
-    }
-
-    .secondBox-left {
-        width: 50%;
-    }
-
-    .second-left-box-p {
-        font-size: 10px;
-    }
-
-    .secondBox-right-options {
-        width: 90%;
-        margin-left: 52px;
-    }
-
-    .skills-container {
-        width: 40vw;
-    }
-
-    .skill-image {
-        width: 12vw;
-        text-align: center;
-        padding: 5px;
-        margin: 5px;
-    }
-
-    .skill-image img {
-        width: 31px;
-        height: 31px;
-    }
-
-    
-    .project-section {
-        padding: 0px 20px;
-    }
-
-    .project-1 {
-        width: 30vw;
-        height: 30vh;
-    }
-    
-    .project-2 {
-        width: 30vw;
-        height: 30vh;
+        white-space: nowrap;
+        word-break: normal;
     }
 
     .fifth-left {
         display: none;
     }
+
     .fifthSection {
         padding: 0px 20px 20px 20px;
     }
@@ -271,35 +67,275 @@
         width: 40vw;
         height: 6vh;
     }
-    
+
     .large-input {
         width: 40vw;
         height: 15vh;
     }
-    
+
     .fifth-btn {
-        font-size: 14px;
-        width: 13vw;
+        font-size: 12px !important;
+        width: 13vw !important; 
         height: 40px;
         padding: 5px;
-    } 
-/* 
-    .grid-box {
-        width: 10vw;
-        height: 25vh;
-        margin: 10px 30px 0 0;
     }
 
-    .grid-box i {
-        font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .res-mt {
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    nav ul li a {
+        font-size: 12px;
     }
 
-    .grid-box h3 {
-        margin: 8px 0;
-        font-size: 16px;
+    nav ul li {
+        padding: 0 10px;
     }
 
-    .grid-box p {
-        font-size: 11px;
-    } */
+    .web-logo {
+        font-size: .9rem;
+        white-space: nowrap;
+        word-break: normal;
+    }
+
+    .fifth-flex {
+        display: flex;
+        padding: 0 0px;
+    }
+
+    .fifthSection {
+        padding: 0px 20px 20px 00px;
+    }
+
+    .large-input {
+        width: 40vw;
+        height: 15vh;
+    }
+
+    .fifth-btn {
+        font-size: 11px !important;
+        width: 15vw;
+        height: 35px;
+        padding: 3px 5px;
+        white-space: nowrap;
+        word-break: normal;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .res-display-none-500 {
+        display: none;
+    }
+
+    .web-logo {
+        font-size: .9rem;
+        white-space: nowrap;
+        word-break: normal;
+        margin: 0px 0px 0px 15px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    nav ul li {
+        padding: 0 0px;
+        margin-right: 20px;
+    }
+
+
+
+    .fifthSection {
+        margin-top: 40px;
+    }
+
+    .fifth-right {
+        margin-left: 60px;
+        padding: 30px;
+        margin-top: -20px;
+    }
+
+    .fifth-input {
+        width: 55vw;
+        height: 6vh;
+    }
+
+    .large-input {
+        width: 55vw;
+        height: 15vh;
+    }
+
+    .fifth-btn {
+        font-size: 9px !important;
+        width: 19vw !important;
+        height: 30px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .thirdSection {
+        padding: 0 .3rem;
+    }
+
+    .web-logo {
+        font-size: .9rem;
+        white-space: nowrap;
+        word-break: normal;
+        margin: 0px 0px 0px 15px;
+    }
+
+    nav {
+        padding: 0 30px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    nav ul li {
+        padding: 0 0px;
+        margin-right: 0px;
+    }
+
+    nav ul {
+        margin-bottom: 0;
+    }
+
+    .light-dark-btn i {
+        font-size: 1rem;
+    }
+
+    .firstSection {
+        height: 250px;
+    }
+
+    .big-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 6px !important;
+        font-size: 10px !important;
+    }
+
+    #about-card h5 {
+        font-size: 1.5rem !important;
+    }
+
+    #about-card-text {
+        font-size: .8rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .fifthSection {
+        padding: 0px 20px 20px 20px;
+        margin-top: 50px;
+    }
+
+    .fifth-title {
+        text-align: center;
+    }
+
+    .fifth-flex {
+        margin-top: 20px;
+    }
+
+    .fifth-title h1 {
+        font-size: 22px;
+    }
+
+    .fifth-right {
+        margin-left: 10px;
+        padding: 30px;
+        margin-top: 10px;
+    }
+
+    .fifth-input {
+        width: 60vw;
+        height: 4vh;
+    }
+
+    .large-input {
+        width: 60vw;
+        height: 15vh;
+    }
+
+    .fifth-btn {
+        font-size: 9px !important;
+        width: 23vw !important;
+        height: 30px;
+        padding: 5px;
+    }
+
+    .footer-copyright {
+        font-size: 7px !important;
+    }
+
+    .footer-lang .p2 {
+        margin-top: 5px !important;
+    }
+
+    .hr-2 {
+        display: none;
+    }
+}
+
+@media (max-width: 300px) {
+
+
+    nav {
+        padding: 0 10px;
+    }
+
+    .web-logo {
+        font-size: .9rem;
+        white-space: nowrap;
+        word-break: normal;
+    }
+
+    .thirdSection {
+        padding: 0 .3rem;
+    }
+
+    .fifth-right {
+        margin-left: -10px;
+        padding: 30px 27px;
+    }
+
+    .fifth-right h1 {
+        text-align: center;
+        font-size: 1.4rem;
+    }
+
+    .fifth-input {
+        width: 70vw;
+        height: 5vh;
+        font-size: 12px;
+    }
+
+    .large-input {
+        width: 70vw;
+        height: 13vh;
+        font-size: 12px;
+    }
+
+    .fifth-btn {
+        font-size: 9px !important;
+        width: 33vw !important;
+        height: 30px;
+        padding: 5px;
+    }
 }
