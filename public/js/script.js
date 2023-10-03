@@ -1,4 +1,4 @@
-// document.getElementById(`Home-jump`).scrollIntoView({behavior: 'smooth'});
+// document.getElementById(`Home-jump`).scrollIntoView({ behavior: 'smooth' });
 
 function typeAnimation() {
     var typed = new Typed('#element', {
@@ -18,44 +18,6 @@ for (let gotoLink of gotoLinks) {
     })
 }
 
-// let skillLinks = document.querySelectorAll(".hreflink");
-// let skillContainer = document.querySelectorAll(".front-end-detail");
-// skillLinks[0].classList.add("active");
-
-// for (let links of skillLinks) {
-//     links.addEventListener("click", (e) => {
-
-//         if (e.srcElement.innerHTML == "Front-End") {
-//             skillContainer[0].classList.add("display-block")
-//             skillContainer[1].classList.remove("display-block")
-//             skillContainer[2].classList.remove("display-block")
-//             skillLinks[0].classList.add("active");
-//             skillLinks[1].classList.remove("active");
-//             skillLinks[2].classList.remove("active");
-//         }
-
-//         else if (e.srcElement.innerHTML == "Back-End") {
-//             skillContainer[1].classList.add("display-block")
-//             skillContainer[0].classList.remove("display-block")
-//             skillContainer[0].classList.add("display-none")
-//             skillContainer[2].classList.remove("display-block")
-//             skillLinks[1].classList.add("active");
-//             skillLinks[0].classList.remove("active");
-//             skillLinks[2].classList.remove("active");
-//         }
-
-//         else if (e.srcElement.innerHTML == "Others") {
-//             skillContainer[0].classList.remove("display-block")
-//             skillContainer[0].classList.add("display-none")
-//             skillContainer[1].classList.remove("display-block")
-//             skillContainer[2].classList.add("display-block")
-//             skillLinks[2].classList.add("active");
-//             skillLinks[0].classList.remove("active");
-//             skillLinks[1].classList.remove("active");
-//         }
-//     })
-// }
-
 let darkModeBtn = document.querySelector(".fa-sun");
 let body = document.querySelector("body");
 let nav = document.querySelector("nav");
@@ -74,49 +36,49 @@ darkModeBtn.addEventListener("click", async (e) => {
     if (e.srcElement.classList.contains("fa-sun")) {
         e.srcElement.classList.replace("fa-sun", "fa-moon");
         body.style.transition = ".5s"
-        body.classList.add("bg-black","color-white");
-        nav.classList.add("bg-black","color-white");
-        for(let frontColor of frontColors) {
-            frontColor.classList.replace("purple","purple-black");
+        body.classList.add("bg-black", "color-white");
+        nav.classList.add("bg-black", "color-white");
+        for (let frontColor of frontColors) {
+            frontColor.classList.replace("purple", "purple-black");
         }
-        for(let frontBtn of frontBtns){
+        for (let frontBtn of frontBtns) {
             frontBtn.classList.add("purple-black-bg");
         }
-        for(let gotoLink of gotoLinks){
+        for (let gotoLink of gotoLinks) {
             gotoLink.classList.add("color-white");
         }
-        for(let cardText of cardTexts) {
+        for (let cardText of cardTexts) {
             cardText.classList.add("color-white");
         }
-        for(let cardTitle of cardTitles) {
+        for (let cardTitle of cardTitles) {
             cardTitle.classList.add("color-white");
         }
         darkModeBtn.classList.add("color-white");
-        for(let gitLink of gitLinks) {
+        for (let gitLink of gitLinks) {
             gitLink.classList.add("color-white");
         }
     }
     else {
         e.srcElement.classList.replace("fa-moon", "fa-sun");
-        body.classList.remove("bg-black","color-white");
-        nav.classList.remove("bg-black","color-white");
-        for(let frontColor of frontColors) {
-            frontColor.classList.replace("purple-black","purple");
+        body.classList.remove("bg-black", "color-white");
+        nav.classList.remove("bg-black", "color-white");
+        for (let frontColor of frontColors) {
+            frontColor.classList.replace("purple-black", "purple");
         }
-        for(let frontBtn of frontBtns){
+        for (let frontBtn of frontBtns) {
             frontBtn.classList.remove("purple-black-bg");
         }
-        for(let gotoLink of gotoLinks){
+        for (let gotoLink of gotoLinks) {
             gotoLink.classList.remove("color-white");
         }
-        for(let cardText of cardTexts) {
+        for (let cardText of cardTexts) {
             cardText.classList.remove("color-white");
         }
-        for(let cardTitle of cardTitles) {
+        for (let cardTitle of cardTitles) {
             cardTitle.classList.remove("color-white");
         }
         darkModeBtn.classList.remove("color-white");
-        for(let gitLink of gitLinks) {
+        for (let gitLink of gitLinks) {
             gitLink.classList.remove("color-white");
         }
     }

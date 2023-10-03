@@ -22,11 +22,11 @@
 
   ::-moz-selection {
       color: white;
-      background: black;
+      background: black; 
   }
 
   ::selection {
-      color: black;
+      color: white;
       background: #0000ff4e;
   }
 
@@ -433,7 +433,7 @@
       padding: 5px;
       padding-left: 15px;
       width: 21vw;
-      height: 40px;
+      height: 35px;
       margin-top: 20px;
       border-radius: 40px;
       font-size: 12px !important;
@@ -443,7 +443,7 @@
       width: 21vw;
       height: 100px;
       margin-top: 20px;
-      padding: 0 0 60px 15px;
+      padding: 10px 0 60px 15px;
       border-radius: 10px;
       font-size: 12px !important;
   }
