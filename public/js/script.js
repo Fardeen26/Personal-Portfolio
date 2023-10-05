@@ -32,6 +32,7 @@ let cards = document.querySelector("#card");
 let cardTexts = document.querySelectorAll(".card-text");
 let cardTitles = document.querySelectorAll(".card-title");
 let gitLinks = document.querySelectorAll(".git-links");
+let brandLogos = document.querySelectorAll(".fa-brands");
 darkModeBtn.addEventListener("click", async (e) => {
     if (e.srcElement.classList.contains("fa-sun")) {
         e.srcElement.classList.replace("fa-sun", "fa-moon");
@@ -57,6 +58,9 @@ darkModeBtn.addEventListener("click", async (e) => {
         for (let gitLink of gitLinks) {
             gitLink.classList.add("color-white");
         }
+        for(let brandLogo of brandLogos) {
+            brandLogo.classList.add('color-white');
+        }
     }
     else {
         e.srcElement.classList.replace("fa-moon", "fa-sun");
@@ -80,6 +84,9 @@ darkModeBtn.addEventListener("click", async (e) => {
         darkModeBtn.classList.remove("color-white");
         for (let gitLink of gitLinks) {
             gitLink.classList.remove("color-white");
+        }
+        for(let brandLogo of brandLogos) {
+            brandLogo.classList.remove('color-white');
         }
     }
 

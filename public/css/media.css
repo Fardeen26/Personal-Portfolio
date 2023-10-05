@@ -24,12 +24,12 @@
 
     .fifth-input {
         width: 30vw;
-        height: 6vh;
+        height: 35px;
     }
 
     .large-input {
         width: 30vw;
-        height: 15vh;
+        height: 100px;
     }
 
     .fifth-btn {
@@ -65,17 +65,17 @@
 
     .fifth-input {
         width: 40vw;
-        height: 6vh;
+        height: 35px;
     }
 
     .large-input {
         width: 40vw;
-        height: 15vh;
+        height: 120px;
     }
 
     .fifth-btn {
         font-size: 12px !important;
-        width: 13vw !important; 
+        width: 13vw !important;
         height: 40px;
         padding: 5px;
     }
@@ -115,7 +115,7 @@
 
     .large-input {
         width: 40vw;
-        height: 15vh;
+        height: 100px;
     }
 
     .fifth-btn {
@@ -164,12 +164,12 @@
 
     .fifth-input {
         width: 55vw;
-        height: 6vh;
+        height: 35px;
     }
 
     .large-input {
         width: 55vw;
-        height: 15vh;
+        height: 100px;
     }
 
     .fifth-btn {
@@ -186,8 +186,13 @@
         overflow-x: hidden;
     }
 
+    .h3 {
+        font-size: 1.6rem !important;
+    }
+
     .thirdSection {
         padding: 0 .3rem;
+        margin-top: 50px;
     }
 
     .web-logo {
@@ -219,11 +224,12 @@
     }
 
     .firstSection {
-        height: 250px;
+        height: 260px;
+        padding: 0 14px;
     }
 
     .big-title {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     .btn {
@@ -243,6 +249,14 @@
     .fifthSection {
         padding: 0px 20px 20px 20px;
         margin-top: 50px;
+    }
+
+    #contact-gray {
+        color: gray;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        font-family: 'Oswald', sans-serif !important;
     }
 
     .fifth-title {
@@ -280,6 +294,14 @@
         padding: 5px;
     }
 
+    .left {
+        font-size: 1.2rem !important;
+    }
+
+    .links a {
+        font-size: 10px;
+    }
+
     .footer-copyright {
         font-size: 7px !important;
     }
@@ -290,6 +312,12 @@
 
     .hr-2 {
         display: none;
+    }
+}
+
+@media (max-width: 321px) {
+    .left {
+        font-size: 1rem !important;
     }
 }
 
