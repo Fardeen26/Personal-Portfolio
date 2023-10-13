@@ -2,13 +2,13 @@ const express = require("express");
 const app = express();
 const port = 8080;
 const path = require("path");
-const { v4: uuidv4 } = require("uuid");
 const methodOverride = require("method-override");
 const { name } = require("ejs");
-const { faker } = require('@faker-js/faker');
 const mongoose = require("mongoose");
-const error = require("./error.js");
-
+const ExpressError = require("./error.js");
+const wrapAsync = require("./utils/wrapAsync.js");
+const { joiuserSchema } = require("./schema.js");
+ 
 main().then(() => {
     console.log("connected to DB");
 }).catch(err => console.log(err));
@@ -36,16 +36,6 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-// const mysql = require('mysql2');
-
-// const connection = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     database: 'Myportfolio',
-//     password: 'Fvdbkl6M8a'
-//   });
-
-
 app.use('/Image', express.static('Image'));
 app.use(express.static(path.join(__dirname, "public/css")));
 app.use(express.static(path.join(__dirname, "public/js")));
@@ -56,12 +46,23 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
-
 app.get("/home", (req, res) => {
     res.render("home.ejs");
 });
 
-app.post("/home/contact", asyncWrap(async (req, res, next) => {
+
+
+const validateListing = (req, res, next) => {
+    let { error } = joiuserSchema.validate(req.body);
+    if (error) {
+        let errMsg = error.details.map((el) => el.message).join(",");
+        throw new ExpressError(400, errMsg);
+    } else {
+        next();
+    }
+}
+
+app.post("/home/contact", validateListing, wrapAsync(async (req, res, next) => {
     try {
         let { name, email, message } = req.body;
         let newUser = new User(
@@ -82,11 +83,25 @@ app.post("/home/contact", asyncWrap(async (req, res, next) => {
     }
 }));
 
-function asyncWrap(fn) {
-    return function (req, res, next) {
-        fn(req, res, next).catch((err) => next(err));
-    }
-}
+app.use((err, req, res, next) => {
+    let { status = 500, message = "Some Error Occurred" } = err;
+    res.status(status).send(message);
+});
+
+app.listen(port, () => {
+    console.log(`listning to port : 8080`);
+});
+
+
+// const mysql = require('mysql2');
+
+// const connection = mysql.createConnection({
+//     host: 'localhost',
+//     user: 'root',
+//     database: 'Myportfolio',
+//     password: 'Fvdbkl6M8a'
+//   });
+
 
 // app.post("/home/contact", (req, res) => {
 //     let { username, email, message} = req.body;
@@ -103,11 +118,3 @@ function asyncWrap(fn) {
 //         res.send(err);
 //     }
 // });
-app.use((err, req, res, next) => {
-    let { status = 500, message = "Some Error Occurred" } = err;
-    res.status(status).send(message);
-});
-
-app.listen(port, () => {
-    console.log(`listning to port : 8080`);
-})

@@ -29,7 +29,8 @@
 
   ::selection {
       color: white;
-      background: #0000ff4e;
+      /* background: #0000ff4e; */
+      background: #3636fe;
   }
 
   .display-none {
