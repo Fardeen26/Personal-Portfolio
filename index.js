@@ -50,8 +50,6 @@ app.get("/home", (req, res) => {
     res.render("home.ejs");
 });
 
-
-
 const validateListing = (req, res, next) => {
     let { error } = joiuserSchema.validate(req.body);
     if (error) {
@@ -85,7 +83,8 @@ app.post("/home/contact", validateListing, wrapAsync(async (req, res, next) => {
 
 app.use((err, req, res, next) => {
     let { status = 500, message = "Some Error Occurred" } = err;
-    res.status(status).send(message);
+    // res.status(status).send(message);
+    res.status(status).render("contact.ejs", { message });
 });
 
 app.listen(port, () => {
