@@ -24,12 +24,12 @@
 
     .fifth-input {
         width: 30vw;
-        height: 35px;
+        height: 35px !important;
     }
 
     .large-input {
         width: 30vw;
-        height: 100px;
+        height: 100px !important;
     }
 
     .fifth-btn {
@@ -65,12 +65,12 @@
 
     .fifth-input {
         width: 40vw;
-        height: 35px;
+        height: 35px !important;
     }
 
     .large-input {
         width: 40vw;
-        height: 120px;
+        height: 120px !important;
     }
 
     .fifth-btn {
@@ -115,7 +115,7 @@
 
     .large-input {
         width: 40vw;
-        height: 100px;
+        height: 100px !important;
     }
 
     .fifth-btn {
@@ -164,12 +164,12 @@
 
     .fifth-input {
         width: 55vw;
-        height: 35px;
+        height: 35px !important;
     }
 
     .large-input {
         width: 55vw;
-        height: 100px;
+        height: 100px !important;
     }
 
     .fifth-btn {
@@ -279,12 +279,12 @@
 
     .fifth-input {
         width: 60vw;
-        height: 4vh;
+        height: 30px !important;
     }
 
     .large-input {
         width: 60vw;
-        height: 15vh;
+        height: 100px !important;
     }
 
     .fifth-btn {
@@ -350,13 +350,13 @@
 
     .fifth-input {
         width: 70vw;
-        height: 5vh;
+        height: 50px !important;
         font-size: 12px;
     }
 
     .large-input {
         width: 70vw;
-        height: 13vh;
+        height: 100px !important;
         font-size: 12px;
     }
 

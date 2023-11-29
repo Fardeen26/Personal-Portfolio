@@ -1,4 +1,21 @@
-// document.getElementById(`Home-jump`).scrollIntoView({ behavior: 'smooth' });
+document.getElementById(`Home-jump`).scrollIntoView({ behavior: 'smooth' });
+(() => {
+    'use strict'
+  
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+
 
 function typeAnimation() {
     var typed = new Typed('#element', {
@@ -30,9 +47,10 @@ let frontColors = document.querySelectorAll(".purple");
 let footerHeading = document.querySelector(".left");
 let cards = document.querySelector("#card");
 let cardTexts = document.querySelectorAll(".card-text");
-let cardTitles = document.querySelectorAll(".card-title");
+let cardTitles = document.querySelectorAll(".project-links");
 let gitLinks = document.querySelectorAll(".git-links");
 let brandLogos = document.querySelectorAll(".fa-brands");
+let aboutCardTitle = document.querySelector(".about-card-title");
 darkModeBtn.addEventListener("click", async (e) => {
     if (e.srcElement.classList.contains("fa-sun")) {
         e.srcElement.classList.replace("fa-sun", "fa-moon");
@@ -61,6 +79,8 @@ darkModeBtn.addEventListener("click", async (e) => {
         for(let brandLogo of brandLogos) {
             brandLogo.classList.add('color-white');
         }
+
+        aboutCardTitle.classList.add("color-white");
     }
     else {
         e.srcElement.classList.replace("fa-moon", "fa-sun");
@@ -88,14 +108,15 @@ darkModeBtn.addEventListener("click", async (e) => {
         for(let brandLogo of brandLogos) {
             brandLogo.classList.remove('color-white');
         }
+
+        aboutCardTitle.classList.remove("color-white");
     }
 
 });
 
-// function UserMessage() {
-//     let submitBtn = document.querySelector(".fifth-btn");
-//     let userMessage = document.querySelector(".user-message");
-//     submitBtn.addEventListener("click", async () => {
-//         userMessage.style.transformY = "0px";
-//     })
-// }
+let btnClose = document.querySelector(".btn-close");
+btnClose.addEventListener("click", () => {
+    let alertDiv = document.querySelector(".alert-primary");
+    console.log("deleted");
+    alertDiv.style.display = "none";
+});

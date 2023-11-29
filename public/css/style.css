@@ -24,13 +24,16 @@
 
   ::-moz-selection {
       color: white;
-      background: black; 
+      background: black;
   }
 
   ::selection {
       color: white;
-      /* background: #0000ff4e; */
       background: #3636fe;
+  }
+
+  .z-index-5 {
+      z-index: 5 !important;
   }
 
   .display-none {
@@ -72,13 +75,28 @@
   }
 
   .purple-black-bg {
-      background-color: #6565ff !important;
+      background-color: #6565ff !important; 
       transition: .5s;
   }
 
   .h3 {
-    font-family: 'Oswald', sans-serif !important;
-    font-size: 2.1rem !important;
+      font-family: 'Oswald', sans-serif !important;
+      font-size: 2.1rem !important;
+  }
+
+  .project-links {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .project-links:hover{
+    color: #3636fe;
+  }
+
+
+  .btn-close {
+      font-size: 12px !important;
+      margin-top: 2px !important;
   }
 
   /*================*/
@@ -103,7 +121,7 @@
   nav ul li {
       list-style: none;
       padding: 0 20px;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
   }
 
   nav ul li a {
@@ -135,7 +153,7 @@
       font-size: 1.4rem;
       margin-left: 50px;
       transition: none;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
   }
 
   .web-logo:hover {
@@ -175,7 +193,7 @@
       font-size: 4rem;
       font-family: 'Rubik', sans-serif;
       font-weight: 800;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
       letter-spacing: 2px;
   }
 
@@ -196,7 +214,7 @@
       background-color: #3636fe;
       transition-duration: 0.3s !important;
       border: 1px solid #3636fe !important;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
       letter-spacing: .5px !important;
   }
 
@@ -206,6 +224,7 @@
 
   .btn:hover {
       background-color: #fff !important;
+      color: #000 !important;
   }
 
   .btnhref:hover {
@@ -216,7 +235,7 @@
   /*===============*/
   /* ABOUT SECTION */
   /*===============*/
-  
+
   .thirdSection {
       height: auto;
       display: flex;
@@ -242,15 +261,16 @@
 
   #about-card-text {
       line-height: 1.5 !important;
-      font-size: 1.05rem !important;
+      font-size: 1.1rem !important;
       word-wrap: normal !important;
       color: #000;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      /* font-family: 'Oswald', sans-serif !important; */
+      font-family: math;
   }
 
   .about-card-title {
-    font-family: 'Oswald', sans-serif !important; /*oswald font*/
-    font-size: 1.5rem !important;
+      font-family: 'Oswald', sans-serif !important;
+      font-size: 1.5rem !important;
   }
 
   .about-img {
@@ -275,12 +295,11 @@
       font-size: 10px;
       display: flex;
       justify-content: center;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
   }
 
   .secondSection h1 {
       font-size: 1.7rem;
-      /* font-family: Poppins, sans-serif !important; */
       text-align: center;
   }
 
@@ -311,7 +330,7 @@
   }
 
   .progress-bar {
-    font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
   }
 
   .hr-2 {
@@ -345,18 +364,18 @@
       background-color: rgba(212, 218, 255, 0.1) !important;
       color: #000 !important;
       overflow: hidden;
-      /* border: 1px solid #3b487b !important; */
   }
 
   .project-card-title {
-    font-family: 'Oswald', sans-serif !important; /*oswald font*/
-    letter-spacing: .5px !important;
-    font-weight: 400 !important;
+      font-family: 'Oswald', sans-serif !important;
+      letter-spacing: .5px !important;
+      font-weight: 400 !important;
   }
 
   .project-card-text {
-    font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
   }
+
   .card-text {
       font-size: .8rem !important;
   }
@@ -383,7 +402,6 @@
       color: #fff;
   }
 
-  
   /*=================*/
   /* CONTACT SECTION */
   /*=================*/
@@ -400,12 +418,11 @@
   .fifth-title h1 {
       font-size: 1.7rem !important;
       margin-top: -3px;
-      /* font-family: Poppins, sans-serif !important; */
   }
 
   #contact-gray {
-    display: flex;
-    justify-content: left;
+      display: flex;
+      justify-content: left;
   }
 
   .fifth-flex {
@@ -418,7 +435,7 @@
       margin-top: 20px;
       display: grid;
       grid-template-columns: auto auto;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/   
+      font-family: 'Oswald', sans-serif !important;
   }
 
   .grid-box {
@@ -453,41 +470,42 @@
 
   .fifth-right h1 {
       font-size: 1.7rem !important;
-      /* font-family: Poppins, sans-serif !important; */
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
   }
 
   .fifth-form {
       margin-top: 25px;
+      margin-top: 45px !important;
   }
 
   .fifth-form input {
-      border: 1px solid gray;
-  }
-
-  .fifth-form input:hover {
-      border: 1px solid black;
+      border: 1px solid gray !important;
   }
 
   .fifth-input {
       padding: 5px;
       padding-left: 15px;
       width: 21vw;
-      height: 35px;
+      height: 35px !important;
       margin-top: 20px;
       border-radius: 40px;
       font-size: 12px !important;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
   }
 
   .large-input {
       width: 21vw;
-      height: 100px;
+      height: 100px !important;
       margin-top: 20px;
       padding: 10px 0 60px 15px;
       border-radius: 10px;
       font-size: 12px !important;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
+      border: 1px solid gray !important;
+  }
+
+  .form-control:hover {
+      border: 1px solid black !important;
   }
 
   .fifth-btn {
@@ -502,7 +520,7 @@
       height: 38px;
       border-radius: 5px;
       transition-duration: 0.7s;
-      font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
       letter-spacing: 1px !important;
   }
 
@@ -518,7 +536,6 @@
 
   footer {
       padding: 20px 30px 40px 30px;
-      /* margin-top: 50px; */
   }
 
   .footer-container {
@@ -532,7 +549,6 @@
 
   .footer-container ul li a {
       text-decoration: none;
-      /* color: #fff; */
   }
 
   .footer-gray {
@@ -563,13 +579,12 @@
   }
 
   .links a i:hover {
-      color: #6565ff;
+      color: #6565ff !important;
   }
 
   .footer-box2 {
       margin-top: 50px;
       display: flex;
-      /* justify-content: space-around; */
       justify-content: center;
   }
 
@@ -588,5 +603,11 @@
   }
 
   .footer-copyright {
-    font-family: 'Oswald', sans-serif !important; /*oswald font*/
+      font-family: 'Oswald', sans-serif !important;
+  }
+
+  .contact-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
