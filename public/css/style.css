@@ -224,11 +224,10 @@
 
   .btn:hover {
       background-color: #fff !important;
-      color: #000 !important;
   }
 
-  .btnhref:hover {
-      color: #000 !important;
+  .btn:hover .btnhref{
+    color: #000 !important;
   }
 
 

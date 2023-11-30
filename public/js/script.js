@@ -49,7 +49,7 @@ let cards = document.querySelector("#card");
 let cardTexts = document.querySelectorAll(".card-text");
 let cardTitles = document.querySelectorAll(".project-links");
 let gitLinks = document.querySelectorAll(".git-links");
-let brandLogos = document.querySelectorAll(".fa-brands");
+let brandLogos = document.querySelectorAll(".fa-2x");
 let aboutCardTitle = document.querySelector(".about-card-title");
 darkModeBtn.addEventListener("click", async (e) => {
     if (e.srcElement.classList.contains("fa-sun")) {
