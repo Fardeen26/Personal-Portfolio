@@ -105,6 +105,8 @@ app.use((req, res, next) => {
     res.locals.error = req.flash("error");
     next();
 });
+
+
 app.get("/home", (req, res) => {
     res.render("home.ejs");
 });
@@ -142,6 +144,10 @@ app.post("/home/contact", validateListing, wrapAsync(async (req, res, next) => {
         next(err);
     }
 }));
+
+app.all("*", (req, res, next) => {
+    res.redirect("/home");
+});
 
 app.use((err, req, res, next) => {
     let { status = 500, message = "Some Error Occurred" } = err;
