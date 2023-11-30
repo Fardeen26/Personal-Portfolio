@@ -15,14 +15,16 @@ const { joiuserSchema } = require("./schema.js");
 
 const client = require('twilio')(process.env.ACCOUNT_SID, process.env.AUTH_TOKEN);
 const session = require("express-session");
+const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
+const DBurl = process.env.ATLAS_DB;
 
 main().then(() => {
     console.log("connected to DB");
 }).catch(err => console.log(err));
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/myportfolio');
+    await mongoose.connect(DBurl);
 }
 
 // <==================== SMS SENDER FUNCTION ====================>
@@ -71,7 +73,20 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
+const store = MongoStore.create({
+    mongoUrl: DBurl,
+    crypto:{
+        secret: process.env.SECRET,
+    },
+    touchAfter: 24 * 3600,
+});
+
+store.on("error", ()=>{
+    console.log("ERROR IN MONGO SESSION STORE", err);
+});
+
 const sessionOptions = {
+    store,
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: true,
