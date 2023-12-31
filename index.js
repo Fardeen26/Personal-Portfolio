@@ -18,6 +18,7 @@ const session = require("express-session");
 const MongoStore = require('connect-mongo');
 const flash = require("connect-flash");
 const DBurl = process.env.ATLAS_DB;
+const localMongoUrl = process.env.LOCAL_MONGODB_URL;
 
 main().then(() => {
     console.log("connected to DB");
