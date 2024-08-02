@@ -111,6 +111,14 @@ app.get("/home", (req, res) => {
     res.render("home.ejs");
 });
 
+app.get("/terms", (req, res) => {
+    res.render("terms.ejs");
+});
+
+app.get("/policy", (req, res) => {
+    res.render("policy.ejs");
+});
+
 const validateListing = (req, res, next) => {
     let { error } = joiuserSchema.validate(req.body);
     if (error) {
