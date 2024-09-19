@@ -108,7 +108,16 @@ app.use((req, res, next) => {
 
 
 app.get("/home", (req, res) => {
-    res.render("home.ejs");
+    // res.render("home.ejs");
+    res.send('The website is under Updation');
+});
+
+app.get("/terms", (req, res) => {
+    res.render("terms.ejs");
+});
+
+app.get("/policy", (req, res) => {
+    res.render("policy.ejs");
 });
 
 const validateListing = (req, res, next) => {
