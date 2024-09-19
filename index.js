@@ -108,8 +108,8 @@ app.use((req, res, next) => {
 
 
 app.get("/home", (req, res) => {
-    // res.render("home.ejs");
-    res.send('The website is under Updation');
+    res.render("home.ejs");
+    // res.send('The website is under Updation');
 });
 
 app.get("/terms", (req, res) => {
