@@ -1,4 +1,4 @@
-if(process.env.NODE_ENV != "production"){
+if (process.env.NODE_ENV != "production") {
     require('dotenv').config()
 }
 const express = require("express");
@@ -75,13 +75,13 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const store = MongoStore.create({
     mongoUrl: DBurl,
-    crypto:{
+    crypto: {
         secret: process.env.SECRET,
     },
     touchAfter: 24 * 3600,
 });
 
-store.on("error", ()=>{
+store.on("error", () => {
     console.log("ERROR IN MONGO SESSION STORE", err);
 });
 
@@ -96,7 +96,7 @@ const sessionOptions = {
         httpOnly: true,
     },
 };
- 
+
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -108,8 +108,8 @@ app.use((req, res, next) => {
 
 
 app.get("/home", (req, res) => {
-    // res.render("home.ejs");
-    res.send('The website is under Updation');
+    res.render("home.ejs");
+    // res.send('The website is under Updation');
 });
 
 app.get("/terms", (req, res) => {
